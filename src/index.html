@@ -11,7 +11,7 @@
             <div class="hero__card hero-card">
               <img src="@img/image-1.png" alt="">
               <h1 class="hero-card__caption"><strong>Агна+</strong> — мультипрофильная компания с широким спектром деятельности в сфере оптовой торговли и промышленного обеспечения.</h1>
-              <a href="catalog.html" class="hero-card__link button button-light">Перейти в каталог</a>
+              <a href="category.html" class="hero-card__link button button-light">Перейти в каталог</a>
             </div>
             <div class="hero__slider">
               <div class="hero__slide hero-slide">
@@ -19,7 +19,7 @@
                 <div class="hero-slide__img"><img src="@img/product-1.png" alt=""></div>
                 <h2 class="hero-slide__caption">ComPacT NSX</h2>
                 <div class="hero-slide__desc">Автоматические выключатели для защиты распределительных линий и электродвигателей на токи до 630А</div>
-                <a href="" class="hero-slide__link button button-light">Узнать цену</a>
+                <a class="hero-slide__link button button-light modal-btn" data-type="feedback">Узнать цену</a>
               </div>
             </div>
           </div>
@@ -240,6 +240,7 @@
       </section>
     </main>
 
+    @@include('html/modals.html') 
     @@include('html/footer.html') 
     @@include('html/foot.html')
   </body>
