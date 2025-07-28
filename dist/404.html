@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
   <link rel="shortcut icon" href="img/favicon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css?_v=20250728125124" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css?_v=20250728125124">
-   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20250728125124" />
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20250728125124" />
-  <link rel="stylesheet" href="css/style.css?_v=20250728125124" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css?_v=20250728134311" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/css/tabby-ui.min.css?_v=20250728134311">
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css?_v=20250728134311" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20250728134311" />
+  <link rel="stylesheet" href="css/style.css?_v=20250728134311" />
 </head>
 
   <body>
@@ -82,11 +82,27 @@
             <input type="text" class="search" placeholder="Поиск...">
           </form>
         </div>
-        <select name="" class="header__lang">
+        <!-- <select name="" class="header__lang">
           <option value="">Русский</option>
           <option value="">Казак</option>
           <option value="">English</option>
-        </select>
+        </select> -->
+        <div class="header__lang select">
+          <div class="select__btn">
+            <a class="select__link active">Русский</a>
+          </div>
+          <ul class="select__list">
+            <li class="select__item">
+              <a class="select__link select__link--en" href="#">English</a>
+            </li>
+            <li class="select__item">
+              <a class="select__link select__link--kz" href="#">Казак</a>
+            </li>
+            <li class="select__item">
+              <a class="select__link select__link--ru active" href="#">Русский</a>
+            </li>
+          </ul>
+        </div>
         <div class="header__burger">
           <span></span>
           <span></span>
@@ -104,11 +120,27 @@
           <li><a href="about.html">О компании</a></li>
           <li><a href="partners.html">Партнеры</a></li>
         </ul>
-        <select name="" class="header__lang header__lang_mob">
+        <!-- <select name="" class="header__lang header__lang_mob">
           <option value="">Русский</option>
           <option value="">Казак</option>
           <option value="">English</option>
-        </select>
+        </select> -->
+        <div class="header__lang header__lang_mob select">
+          <div class="select__btn">
+            <a class="select__link active">Русский</a>
+          </div>
+          <ul class="select__list">
+            <li class="select__item">
+              <a class="select__link select__link--en" href="#">English</a>
+            </li>
+            <li class="select__item">
+              <a class="select__link select__link--kz" href="#">Казак</a>
+            </li>
+            <li class="select__item">
+              <a class="select__link select__link--ru active" href="#">Русский</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   </div>
@@ -165,10 +197,10 @@
     </div>
   </div>
 </div> 
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js?_v=20250728125124"></script>
-<script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js?_v=20250728125124"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js?_v=20250728125124"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20250728125124"></script>
-<script src="js/app.js?_v=20250728125124"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js?_v=20250728134311"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby/dist/js/tabby.polyfills.min.js?_v=20250728134311"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js?_v=20250728134311"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20250728134311"></script>
+<script src="js/app.js?_v=20250728134311"></script>
   </body>
 </html>
