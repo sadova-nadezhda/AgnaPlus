@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Главная" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <section class="page-error section-hidden">
+        <div class="page-error__container">
+          <div class="page-error__num">404</div>
+          <div class="page-error__title">Страница не найдена</div>
+          <div class="page-error__desc">К сожалению, запрошенная страница недоступна. <br> Возможно, она была удалена, перемещена или вы допустили ошибку в адресе.</div>
+          <a href="/" class="page-error__button button">Перейти на главную</a>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/modals.html') 
+    @@include('html/foot.html')
+  </body>
+</html>
