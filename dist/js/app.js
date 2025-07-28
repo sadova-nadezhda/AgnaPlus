@@ -19,6 +19,18 @@ window.addEventListener("load", function () {
   }
 
   // Swiper
+
+  var heroSwiper = new Swiper(".heroSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 8,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".hero-pagination",
+    },
+  });
   
   var catalogSwiper = new Swiper(".catalogSwiper", {
     slidesPerView: 1,
