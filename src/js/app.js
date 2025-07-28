@@ -23,6 +23,10 @@ window.addEventListener("load", function () {
   var catalogSwiper = new Swiper(".catalogSwiper", {
     slidesPerView: 1,
     spaceBetween: 16,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".catalog-next",
       prevEl: ".catalog-prev",
@@ -40,6 +44,10 @@ window.addEventListener("load", function () {
   var partnersSwiper = new Swiper(".partnersSwiper", {
     slidesPerView: 2,
     spaceBetween: 16,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".partners-pagination",
       type: "progressbar",
@@ -57,6 +65,10 @@ window.addEventListener("load", function () {
   var certificateSwiper = new Swiper(".certificateSwiper", {
     slidesPerView: 1,
     spaceBetween: 16,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".certificate-pagination",
       type: "progressbar",
@@ -76,6 +88,10 @@ window.addEventListener("load", function () {
     spaceBetween: 8,
     centeredSlides: true,
     initialSlide: 2,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     breakpoints: {
       768: {
         slidesPerView: 2.8,
@@ -93,6 +109,10 @@ window.addEventListener("load", function () {
     grabCursor: true,
     initialSlide: 2,
     slidesPerView: 2,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     coverflowEffect: {
       rotate: 0,
       stretch: 0,
