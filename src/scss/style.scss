@@ -1221,6 +1221,7 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: calc(8 * var(--width-multiplier));
     background-color: var(--light, $light);
+    transition: border-color 0.3s ease-in-out;
     &__caption {
       margin-bottom: calc(16 * var(--width-multiplier));
       color: var(--main, $main);
@@ -1242,6 +1243,9 @@
       font-size: calc(36 * var(--width-multiplier));
       line-height: 1;
       text-align: end;
+    }
+    &:hover {
+      border-color: var(--main, $main);
     }
   }
   &-inner {

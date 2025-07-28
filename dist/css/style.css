@@ -1688,6 +1688,7 @@ h6 {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: calc(8 * var(--width-multiplier));
   background-color: var(--light, #FFFFFF);
+  transition: border-color 0.3s ease-in-out;
 }
 
 .services-card__caption {
@@ -1707,6 +1708,10 @@ h6 {
   font-size: calc(36 * var(--width-multiplier));
   line-height: 1;
   text-align: end;
+}
+
+.services-card:hover {
+  border-color: var(--main, #260BB1);
 }
 
 .services-inner__wrap {
