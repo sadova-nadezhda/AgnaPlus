@@ -2131,6 +2131,7 @@ h6 {
   padding: calc(50 * var(--width-multiplier));
   border-radius: calc(8 * var(--width-multiplier));
   background-color: rgb(246, 246, 246);
+  transition: background-color 0.3s ease-in-out;
 }
 
 .catalog-slide img {
@@ -2138,6 +2139,10 @@ h6 {
   width: auto;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.catalog-slide:hover {
+  background-color: #F2761E;
 }
 
 .catalog__title {

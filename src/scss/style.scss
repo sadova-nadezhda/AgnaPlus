@@ -1615,13 +1615,17 @@
     padding: calc(50 * var(--width-multiplier));
     border-radius: calc(8 * var(--width-multiplier));
     background-color: rgba(246, 246, 246, 1);
+    transition: background-color 0.3s ease-in-out;
     img {
       height: calc(52 * var(--width-multiplier));
       width: auto;
       object-fit: contain;
     }
+    &:hover {
+      background-color: #F2761E;
+    }
     // &.swiper-slide-active {
-    //   background-color: var(--main, &main);
+    //   
     // }
   }
   &__title {
