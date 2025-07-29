@@ -7,12 +7,12 @@
   &__container {
     display: flex;
     flex-direction: column;
-    gap: calc(28 * var(--width-multiplier));
+    gap: calc(16 * var(--width-multiplier));
     @media (max-width: 1024px) {
-      gap: calc(20 * var(--width-multiplier));
+      gap: calc(14 * var(--width-multiplier));
     }
     @media (max-width: 767px) {
-      gap: calc(16 * var(--width-multiplier));
+      gap: calc(10 * var(--width-multiplier));
     }
   }
   &__top, &__info {
@@ -93,13 +93,17 @@
     gap: calc(8 * var(--width-multiplier));
   }
   &__logo {
-    width: calc(220 * var(--width-multiplier));
-    height: calc(40 * var(--width-multiplier));
+    width: calc(200 * var(--width-multiplier));
+    height: calc(60 * var(--width-multiplier));
     margin-right: auto;
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
+    }
+    @media (max-width: 767px) {
+      width: calc(160 * var(--width-multiplier));
+      height: calc(60 * var(--width-multiplier));
     }
   }
   &__search {
@@ -168,6 +172,12 @@
     }
     @media (max-width: 767px) {
       font-size: calc(16 * var(--width-multiplier));
+    }
+    a {
+      transition: color 0.3s ease-in-out;
+      &:hover {
+        color: var(--main, $main);
+      }
     }
   }
   &__burger {
@@ -299,7 +309,6 @@
     padding-left: calc(46 * var(--width-multiplier));
     padding-right: calc(42 * var(--width-multiplier));
     font-size: calc(16 * var(--width-multiplier));
-    line-height: 1;
     opacity: 1;
     transition: opacity 0.3s;
 

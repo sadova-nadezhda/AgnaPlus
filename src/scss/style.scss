@@ -24,15 +24,30 @@
 .section {
   &-pad {
     padding: calc(64 * var(--width-multiplier)) 0;
+    @media (max-width: 767px) {
+      padding: calc(50 * var(--width-multiplier)) 0;
+    }
     &-top {
       padding-top: calc(64 * var(--width-multiplier));
+      @media (max-width: 767px) {
+        padding-top: calc(50 * var(--width-multiplier));
+      }
     }
     &-bottom {
       padding-bottom: calc(64 * var(--width-multiplier));
+      @media (max-width: 767px) {
+        padding-bottom: calc(50 * var(--width-multiplier));
+      }
     }
   }
   &-hidden {
     overflow: hidden;
+  }
+  &-first {
+    padding-top: calc(32 * var(--width-multiplier));
+    @media (max-width: 767px) {
+      padding-top: calc(24 * var(--width-multiplier));
+    }
   }
 }
 
@@ -342,20 +357,19 @@
     }
   }
   &-img {
-    height: calc(260 * var(--width-multiplier));
-    margin: calc(70 * var(--width-multiplier)) 0;
+    height: calc(220 * var(--width-multiplier));
+    margin: calc(32 * var(--width-multiplier)) 0;
     img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
     @media (max-width: 1024px) {
-      height: calc(220 * var(--width-multiplier));
-      margin: calc(48 * var(--width-multiplier)) 0;
+      height: calc(200 * var(--width-multiplier));
     }
     @media (max-width: 767px) {
-      height: calc(200 * var(--width-multiplier));
-      margin: calc(32 * var(--width-multiplier)) 0;
+      height: calc(180 * var(--width-multiplier));
+      margin: calc(24 * var(--width-multiplier)) 0;
     }
   }
   &-pagination {
@@ -384,15 +398,15 @@
     }
   }
   &__card {
-    flex: 0 0 calc(280 * var(--width-multiplier));
+    flex: 0 0 calc(240 * var(--width-multiplier));
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: calc(16 * var(--width-multiplier));
-    width: calc(500 * var(--width-multiplier));
+    // width: calc(500 * var(--width-multiplier));
     height: calc(420 * var(--width-multiplier));
-    padding: calc(18 * var(--width-multiplier));
+    padding: calc(16 * var(--width-multiplier));
     border-radius: calc(8 * var(--width-multiplier));
     color: var(--light, &--light);
     overflow: hidden;
@@ -431,6 +445,9 @@
           opacity: 1;
         }
       }
+    }
+    @media (max-width: 767px) {
+      height: calc(320 * var(--width-multiplier));
     }
   }
   &__num {
@@ -743,7 +760,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      min-height: calc(700 * var(--width-multiplier));
+      min-height: calc(520 * var(--width-multiplier));
       padding: calc(32 * var(--width-multiplier));
       border-radius: calc(8 * var(--width-multiplier));
       overflow: hidden;
@@ -1254,7 +1271,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      min-height: calc(700 * var(--width-multiplier));
+      min-height: calc(520 * var(--width-multiplier));
       margin-bottom: calc(32 * var(--width-multiplier));
       padding: calc(32 * var(--width-multiplier));
       border-radius: calc(8 * var(--width-multiplier));
@@ -1286,6 +1303,7 @@
       }
       @media (max-width: 767px) {
         min-height: calc(400 * var(--width-multiplier));
+        margin-bottom: calc(24 * var(--width-multiplier));
         padding: calc(16 * var(--width-multiplier));
       }
     }
