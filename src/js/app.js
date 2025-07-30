@@ -165,13 +165,13 @@ window.addEventListener("load", function () {
     direction: "vertical",
     effect: "coverflow",
     centeredSlides: true,
-    grabCursor: true,
-    initialSlide: 2,
+    // initialSlide: 2,
     slidesPerView: 2,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+    grabCursor: true,
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
     coverflowEffect: {
       rotate: 0,
       stretch: 0,
@@ -210,6 +210,69 @@ window.addEventListener("load", function () {
       prevEl: ".product-prev",
     },
   });
+
+  // Gsap
+
+  function lockScroll() {
+    document.body.style.overflow = "hidden";
+  }
+
+  function unlockScroll() {
+    document.body.style.overflow = "";
+  }
+
+  let historyPlayed = false;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.create({
+    trigger: "#history",
+    start: "bottom bottom",
+    onEnter: () => {
+      if (!historyPlayed) {
+        lockScroll();
+
+        const totalSlides = historySwiper.slides.length;
+        let currentIndex = historySwiper.activeIndex;
+
+        // Слушаем сдвиги
+        historySwiper.on("slideChange", () => {
+          currentIndex = historySwiper.activeIndex;
+
+          // Если дошли до последнего слайда
+          if (currentIndex >= totalSlides - 1) {
+            unlockScroll();
+            historyPlayed = true;
+
+            // Отключаем autoplay (если не нужен дальше)
+            historySwiper.autoplay.stop();
+          }
+        });
+      }
+    },
+  });
+
+  // gsap.registerPlugin(ScrollTrigger);
+
+  // const totalSlides = historySwiper.slides.length;
+
+  // let previousSlide = -1;
+
+  // ScrollTrigger.create({
+  //   trigger: "#history",
+  //   start: "top top",
+  //   end: () => `+=${window.innerHeight * totalSlides}`,
+  //   pin: true,
+  //   scrub: true,
+  //   onUpdate: (self) => {
+  //     const currentSlide = Math.round(self.progress * (totalSlides - 1));
+
+  //     if (currentSlide !== previousSlide) {
+  //       historySwiper.slideTo(currentSlide);
+  //       previousSlide = currentSlide;
+  //     }
+  //   },
+  // });
 
   // AOS Animate
 
